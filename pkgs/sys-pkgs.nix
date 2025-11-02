@@ -11,4 +11,5 @@ with pkgs; [
     swayfx
     soteria
     rofi
+    neovim
 ]
