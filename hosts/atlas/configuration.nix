@@ -34,8 +34,8 @@
   };
 
   services = {
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+    displayManager.ly.enable = true;
+    desktopManager.plasma6.enable = true;
     
     input-remapper = {
       enable = true;
@@ -45,7 +45,7 @@
 
   # auto-mounted drives
   fileSystems."/mnt/Games" = {
-    device = "/dev/nvme0n1p4";
+    device = "/dev/disk/by-uuid/b3bfd701-8b8b-45a8-a3f1-35213720a5dd"; 
     fsType = "ext4";
     options = [ "rw" "exec" "suid" "dev" "nofail" ];
   };
