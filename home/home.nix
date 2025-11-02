@@ -13,9 +13,12 @@
 	# programs
 	programs.git = {
         enable = true;
-        userName = "Cat";
-        userEmail = "bodyglue4@gmail.com";
-      };
+        settings = {
+			user.name = "Cat";
+			user.email = "bodyglue4@gmail.com";
+		};
+	};
+	
 	programs.bash = {
 		enable = true;
 		enableCompletion = true;

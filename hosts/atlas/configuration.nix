@@ -23,31 +23,8 @@
 
   networking.hostName = "atlas";
 
-  time.timeZone = "America/New_York";
-
-  hardware.enableAllFirmware = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = with pkgs; import ../../pkgs/sys-pkgs.nix { inherit pkgs; };
-  fonts.packages = with pkgs; import ../../pkgs/fonts.nix { inherit pkgs; };
-
-  # garbage collection
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 3d";
-  };
-
-  # accounts
-  users.users.noir = {
-    isNormalUser = true;
-    description = "Noir";
-    extraGroups = [ "networkmanager" "wheel" ];
-  };
-
   # programs
   programs = {
-      firefox.enable = true;
       steam.enable = true;
       xwayland.enable = true;
       sway = {
@@ -56,37 +33,13 @@
       };
   };
 
-  # desktop portal
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = true;
-    config.common.default = ["gtk"];
-    extraPortals = [pkgs.xdg-desktop-portal-gtk];
-  };
-
-  # services & security
-  security = {
-    rtkit.enable = true;
-    polkit.enable = true;
-  };
-
   services = {
-    flatpak.enable = true;
-    xserver.enable = true;
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
-    gnome.gnome-keyring.enable = true;
+    
     input-remapper = {
       enable = true;
       enableUdevRules = true;
-    };
-
-    # audio
-    pipewire = {
-      enable = true;
-      alsa = { enable = true; support32Bit = true; };
-      jack.enable = true;
-      pulse.enable = true;
     };
   };
 

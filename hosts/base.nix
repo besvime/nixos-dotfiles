@@ -35,8 +35,6 @@
   # Common programs
   programs = {
     firefox.enable = true;
-    steam.enable = true;
-    xwayland.enable = true;
   };
 
   # Common audio & services
@@ -58,10 +56,6 @@
 
     flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
-    input-remapper = {
-      enable = true;
-      enableUdevRules = true;
-    };
   };
 
   # Portals
