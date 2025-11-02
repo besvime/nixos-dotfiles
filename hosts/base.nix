@@ -35,7 +35,6 @@
   };
 
   # Shared environment packages
-  environment.systemPackages = with pkgs; import ../pkgs/sys-pkgs.nix { inherit pkgs; };
   fonts.packages = with pkgs; import ../pkgs/fonts.nix { inherit pkgs; };
 
   # Common programs
