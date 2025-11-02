@@ -4,7 +4,7 @@
   imports = [
       /etc/nixos/hardware-configuration.nix
   ];
-
+  
   boot = {
     initrd.luks.devices."luks-3f758e19-7163-4979-a642-f6d029d9cb7f".device = "/dev/disk/by-uuid/3f758e19-7163-4979-a642-f6d029d9cb7f";
     kernelPackages = pkgs.linuxPackages_latest;

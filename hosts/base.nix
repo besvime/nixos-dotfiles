@@ -8,6 +8,12 @@
 
   time.timeZone = "America/New_York";
 
+  # base packages
+  environment.systemPackages = with pkgs; [
+    alacritty
+    vscode
+  ];
+  
   # networking
   networking = {
     networkmanager.enable = true;
