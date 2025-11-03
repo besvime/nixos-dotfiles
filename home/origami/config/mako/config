@@ -1,7 +1,7 @@
 sort=-time
 layer=overlay
-background-color=#1a1b26
-border-color=#7aa2f7
+background-color=#1D1D1D
+border-color=#151515
 text-color=#bfcad0
 width=300
 height=110
@@ -17,9 +17,7 @@ font=JetBrains Mono 13
 border-color=#2f354e
 
 [urgency=normal]
-border-color=#7aa2f7
+border-color=#151515
 
 [urgency=high]
 border-color=#7aa2f7
-background-color=#24283b
-text-color=#ffffff
