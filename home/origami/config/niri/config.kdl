@@ -164,8 +164,8 @@ layout {
 
     focus-ring {
         width 3
-        active-color "#00ac89"
-        inactive-color "#505050"
+        active-color "#D4D4D4"
+        inactive-color "#1D1D1D"
     }
 
     shadow {
