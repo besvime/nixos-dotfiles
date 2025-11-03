@@ -25,6 +25,7 @@
   home.file.".config/niri".source = ./config/niri;
   home.file.".config/mako".source = ./config/mako;
   home.file.".config/rofi".source = ./config/rofi;
+  home.file.".config/waybar".source = ./config/waybar;
 
   # programs
   programs = {
