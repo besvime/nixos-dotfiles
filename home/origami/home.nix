@@ -91,7 +91,7 @@
       };
     };
 
-    polkit = (start-with-graphical-session "Polkit service") // {
+    gnome-polkit = (start-with-graphical-session "Gnome polkit service") // {
       Service = {
         Type = "simple";
         ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
