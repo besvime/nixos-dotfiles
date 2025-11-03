@@ -17,12 +17,12 @@
 
   # programs
   programs = {
+      niri.enable = true;
       xwayland.enable = true;
   };
 
   services = {
     displayManager.gdm.enable = true;
-    desktopManager.plasma6.enable = true;
   };
 
   system.stateVersion = "25.05";

@@ -8,8 +8,17 @@
     vesktop
     spotify
     spicetify-cli
+    
+    rofi
+    mako
+
+    polkit_gnome
+    xwayland-satellite
   ];
   
+  # configs
+  home.file.".config/niri".source = ./config/niri;
+
   # programs
   programs.git = {
     enable = true;

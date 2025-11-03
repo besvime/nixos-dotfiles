@@ -12,6 +12,8 @@
   environment.systemPackages = with pkgs; [
     alacritty
     vscode
+    vim
+    neovim
   ];
   
   # networking
@@ -34,9 +36,18 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  # Shared environment packages
-  fonts.packages = with pkgs; import ../pkgs/fonts.nix { inherit pkgs; };
+  # Shared environment settings
+  fonts = {
+    fontconfig.enable = true;
+    packages = with pkgs; import ../pkgs/fonts.nix { inherit pkgs; };
+  };
 
+  environment.variables = {
+    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+    OZONE_PLATFORM = "wayland";
+    GDK_BACKEND = "wayland";
+  };
+  
   # Common programs
   programs = {
     firefox.enable = true;
