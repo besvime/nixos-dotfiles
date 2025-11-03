@@ -7,8 +7,6 @@ environment {
     XDG_CURRENT_DESKTOP "niri"
 }
 
-spawn-sh-at-startup "./autostart.sh"
-
 input {
     touchpad {
         tap
@@ -150,6 +148,8 @@ binds {
     MOD+SHIFT+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
     MOD+O                               repeat=false { toggle-overview; }
 }
+
+spawn-sh-at-startup "./autostart.sh"
 
 prefer-no-csd // Disable program decorations
 screenshot-path null // Disable screenshot saving
