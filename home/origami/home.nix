@@ -48,54 +48,49 @@
 
   # systemd services
   systemd.user.services = let
-    start-with-graphical-session = Description: {
+    start-with-graphical-session = description: {
       Unit = {
-        inherit Description;
-        After = ["graphical-session.target"];
-        PartOf = ["graphical-session.target"];
-        BindsTo = ["graphical-session.target"];
-        Requisite = ["graphical-session.target"];
+        Description = description;
+        After = [ "graphical-session.target" ];
+        PartOf = [ "graphical-session.target" ];
+        BindsTo = [ "graphical-session.target" ];
+        Requisite = [ "graphical-session.target" ];
       };
-      Install.WantedBy = ["graphical-session.target" "niri-session.service"];
+      Install.WantedBy = [ "graphical-session.target" "niri-session.service" ];
     };
   in {
-    wallpaper = start-with-graphical-session "Wallpaper service"
-    // {
+    wallpaper = (start-with-graphical-session "Wallpaper service") // {
       Service = {
         Type = "simple";
-        ExecStart = "swaybg -i ~/nixos-dotfiles/assets/wallpapers/mountain.jpg -m fill";
+        ExecStart = "${pkgs.swaybg}/bin/swaybg -i ${config.home.homeDirectory}/nixos-dotfiles/assets/wallpapers/mountain.jpg -m fill";
         Restart = "on-failure";
       };
     };
 
-    idle = start-with-graphical-session "Idle service"
-    // {
+    idle = (start-with-graphical-session "Idle service") // {
       Service = {
         Type = "simple";
-        ExecStart = "swayidle -w timeout 601 'niri msg action power-off-monitors' timeout 600 'swaylock -f' before-sleep 'swaylock -f'";
+        ExecStart = "${pkgs.swayidle}/bin/swayidle -w timeout 601 'niri msg action power-off-monitors' timeout 600 'swaylock -f' before-sleep 'swaylock -f'";
         Restart = "on-failure";
       };
     };
 
-    waybar = start-with-graphical-session "Waybar service"
-    // {
+    waybar = (start-with-graphical-session "Waybar service") // {
       Service = {
         Type = "simple";
-        ExecStart = "waybar";
+        ExecStart = "${pkgs.waybar}/bin/waybar";
         Restart = "on-failure";
       };
     };
 
-
-    mako = start-with-graphical-session "Mako service"
-      // {
-        Service = {
-          Type = "simple";
-          ExecStart = "mako";
-          Restart = "on-failure";
-        };
+    mako = (start-with-graphical-session "Mako service") // {
+      Service = {
+        Type = "simple";
+        ExecStart = "${pkgs.mako}/bin/mako";
+        Restart = "on-failure";
       };
-  };
+    };
+  }
 
   home.stateVersion = "25.05";
 }
