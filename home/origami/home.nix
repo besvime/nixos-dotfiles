@@ -90,6 +90,14 @@
         Restart = "on-failure";
       };
     };
+
+    polkit = (start-with-graphical-session "Polkit service") // {
+      Service = {
+        Type = "simple";
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        Restart = "on-failure";
+      };
+    };
   };
 
   home.stateVersion = "25.05";

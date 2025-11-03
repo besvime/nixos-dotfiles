@@ -9,7 +9,6 @@
     discord
     vesktop
     spotify
-    spicetify-cli
     input-remapper
     grim
     slurp
