@@ -12,7 +12,8 @@
     rofi
     mako
     wlogout
-    swww
+    swaybg
+    swaylock
     nautilus
     waybar
     

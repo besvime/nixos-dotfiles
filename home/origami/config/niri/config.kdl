@@ -32,8 +32,9 @@ binds {
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: alacritty" { spawn "alacritty"; }
     MOD+SPACE                           hotkey-overlay-title="Open App Launcher: rofi" { spawn "rofi" "-show" "drun"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
-    MOD+E                             hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
-
+    MOD+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
+    MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
+    
     // ─── Window Movement and Focus ───
     MOD+Q                               { close-window; }
 
