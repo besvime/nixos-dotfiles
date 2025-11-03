@@ -5,8 +5,8 @@
 
 * {
     bg: #1D1D1D;
-    hv: #151515;
-    primary: #E2E2E2;
+    hv: #ffffffff;
+    primary: #2C2C2C;
     ug: #24283b;
     font: "JetBrains Mono 12";
     background-color: @bg;
