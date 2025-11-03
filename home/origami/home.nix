@@ -16,6 +16,8 @@
     swaylock
     nautilus
     waybar
+    pavucontrol
+    btop
     
     polkit_gnome
     xwayland-satellite

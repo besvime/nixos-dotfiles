@@ -13,6 +13,7 @@
   "modules-right": [
     "network",
     "pulseaudio",
+    "battery",
     "tray"
   ],
 
@@ -20,6 +21,11 @@
     "format": "{:%a, %d — %I:%M %p}",
     "tooltip-format": "{:%A, %B %d %Y\n%I:%M:%S %p}",
     "interval": 5
+  },
+
+  "battery": {
+    "format": "{icon}",
+    "format-icons": ["", "", "", "", ""]
   },
 
   "network": {
