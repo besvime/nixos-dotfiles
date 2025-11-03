@@ -1,70 +1,47 @@
-// -*- mode: jsonc -*-
 {
-    "layer": "top",
-    "position": "bottom",
-    "height": 30,
-    "spacing": 4,
-    "modules-left": [
-        "niri/workspaces"
-    ],
-    "modules-center": [
-        "clock"
-    ],
-    "modules-right": [
-        "pulseaudio",
-        "network",
-        "battery",
-        "tray"
-    ],
- 
-    "tray": {
-        "spacing": 10
+  "reload_style_on_change": true,
+  "height": 20,
+  "modules-left": [
+      "niri/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "tray"
+  ],
+
+  "clock": {
+    "format": "{:%a, %d — %I:%M %p}",
+    "tooltip-format": "{:%A, %B %d %Y\n%I:%M:%S %p}",
+    "interval": 5
+  },
+
+  "network": {
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "interval": 3,
+    "spacing": 1,
+    "tooltip-format": "Connected to {essid}\nSignal strenght: {signalStrength}%\n\uf063 {bandwidthDownBytes:<} \uf062 {bandwidthUpBytes:>}",
+    "tooltip-format-ethernet": "<span size='12000' rise='-2pt'>\uf063</span> {bandwidthDownBytes:<} <span size='12000' rise='-2pt'>\uf062</span> {bandwidthUpBytes:=}"
+	},
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": ["", "", ""]
     },
-    "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    }
+    "on-click": "pavucontrol",
+    "scroll-step": 5,
+    "format-muted": "",
+    "tooltip-format": "Volume: {volume}%\nDevice: {desc}"
+	}
 }
+
