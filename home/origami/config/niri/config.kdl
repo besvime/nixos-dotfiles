@@ -152,7 +152,7 @@ binds {
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
 spawn-at-startup "alacritty"
-spawn-at-startup "swaybg -i ~/nixos-dotfiles/assets/wallpapers/mountain.jpg -m fill"
+spawn-at-startup "sleep 1 & swaybg -i ~/nixos-dotfiles/assets/wallpapers/mountain.jpg -m fill"
 spawn-at-startup "swayidle -w timeout 601 'niri msg action power-off-monitors' timeout 600 'swaylock -f' before-sleep 'swaylock -f'"
 
 prefer-no-csd // Disable program decorations
