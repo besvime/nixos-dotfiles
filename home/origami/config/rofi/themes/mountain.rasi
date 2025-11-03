@@ -8,6 +8,7 @@
     hv: #151515;
     primary: #2C2C2C;
     ug: #E2E2E2;
+    focus: #DBDBDB;
     font: "JetBrains Mono 12";
     background-color: @bg;
     border: 0px;
@@ -93,13 +94,13 @@ element-text {
 }
 
 element selected.normal {
-    color: @black;
+    color: @focus;
     background-color: @hv;
 }
 
 element normal active {
     background-color: @hv;
-    color: @black;
+    color: @focus;
 }
 
 element-icon {
