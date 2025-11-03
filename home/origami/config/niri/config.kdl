@@ -163,7 +163,7 @@ layout {
     }
 
     focus-ring {
-        width 3
+        width 1
         active-color "#D4D4D4"
         inactive-color "#1D1D1D"
     }
@@ -217,6 +217,6 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 5
+    geometry-corner-radius 2
     clip-to-geometry true
 }
