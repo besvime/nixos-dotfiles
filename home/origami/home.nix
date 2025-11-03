@@ -90,7 +90,7 @@
         Restart = "on-failure";
       };
     };
-  }
+  };
 
   home.stateVersion = "25.05";
 }
