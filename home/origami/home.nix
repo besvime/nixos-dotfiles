@@ -11,7 +11,11 @@
     
     rofi
     mako
-
+    wlogout
+    swww
+    nautilus
+    waybar
+    
     polkit_gnome
     xwayland-satellite
   ];
@@ -20,17 +24,19 @@
   home.file.".config/niri".source = ./config/niri;
 
   # programs
-  programs.git = {
-    enable = true;
-    settings = {
-      user.name = "Cat";
-      user.email = "bodyglue4@gmail.com";
+  programs = {
+    git = {
+      enable = true;
+      settings = {
+        user.name = "Cat";
+        user.email = "bodyglue4@gmail.com";
+      };
     };
-  };
 
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
+    bash = {
+      enable = true;
+      enableCompletion = true;
+    };
   };
 
   # settings
