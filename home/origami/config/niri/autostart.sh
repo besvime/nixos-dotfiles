@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 sleep 1
 
-(sleep 2 && /nix/store/.../polkit-gnome-authentication-agent-1) &
 swaybg -i ~/nixos-dotfiles/assets/wallpapers/mountain.jpg -m fill &
 waybar &
 mako &
