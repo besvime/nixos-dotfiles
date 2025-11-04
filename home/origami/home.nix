@@ -18,7 +18,9 @@
     waybar
     pavucontrol
     btop
-    
+    xcursor-pro
+    waypaper
+
     polkit_gnome
     xwayland-satellite
   ];
@@ -64,7 +66,7 @@
     wallpaper = (start-with-graphical-session "Wallpaper service") // {
       Service = {
         Type = "simple";
-        ExecStart = "${pkgs.swaybg}/bin/swaybg -i ${config.home.homeDirectory}/nixos-dotfiles/assets/wallpapers/mountain.jpg -m fill";
+        ExecStart = "${pkgs.waypaper}/bin/wayaper --restore";
         Restart = "on-failure";
       };
     };
