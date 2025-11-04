@@ -28,9 +28,7 @@
   ];
   
   # configs
-  home.file.".config/sway".source = ./config/sway;
-  home.file.".config/rofi".source = ./config/rofi;
-  home.file.".config/mako".source = ./config/mako;
+  home.file.".config/mango".source = ./config/mango;
 
   # programs
   programs.git = {
@@ -48,45 +46,6 @@
 
   # settings
   dconf.enable = true;
-
-  # systemd services
-  systemd.user.services = let
-    start-with-graphical-session = description: {
-      Unit = {
-        Description = description;
-        After = [ "graphical-session.target" ];
-        PartOf = [ "graphical-session.target" ];
-        BindsTo = [ "graphical-session.target" ];
-        Requisite = [ "graphical-session.target" ];
-      };
-      Install.WantedBy = [ "graphical-session.target" "mango-session.target"];
-    };
-    
-  in {
-    waybar = (start-with-graphical-session "Waybar service") // {
-      Service = {
-        Type = "simple";
-        ExecStart = "${pkgs.waybar}/bin/waybar";
-        Restart = "on-failure";
-      };
-    };
-
-    mako = (start-with-graphical-session "Mako service") // {
-      Service = {
-        Type = "simple";
-        ExecStart = "${pkgs.mako}/bin/mako";
-        Restart = "on-failure";
-      };
-    };
-
-    kde-polkit = (start-with-graphical-session "KDE polkit service") // {
-      Service = {
-        Type = "simple";
-        ExecStart = "${pkgs.kdePackages.polkit-kde-agent-1}/libexec/polkit-kde-authentication-agent-1";
-        Restart = "on-failure";
-      };
-    };
-  };
 
   home.stateVersion = "25.05";
 }
