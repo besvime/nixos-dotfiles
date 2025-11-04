@@ -19,7 +19,6 @@ input {
 }
 
 output "eDP-1" {
-    mode "1920x1080"
     scale 1
 }
 
@@ -95,30 +94,30 @@ binds {
     MOD+8                               { focus-workspace 8; }
     MOD+9                               { focus-workspace 9; }
 
-    MOD+CTRL+1                          { move-column-to-workspace 1; }
-    MOD+CTRL+2                          { move-column-to-workspace 2; }
-    MOD+CTRL+3                          { move-column-to-workspace 3; }
-    MOD+CTRL+4                          { move-column-to-workspace 4; }
-    MOD+CTRL+5                          { move-column-to-workspace 5; }
-    MOD+CTRL+6                          { move-column-to-workspace 6; }
-    MOD+CTRL+7                          { move-column-to-workspace 7; }
-    MOD+CTRL+8                          { move-column-to-workspace 8; }
-    MOD+CTRL+9                          { move-column-to-workspace 9; }
+    MOD+SHIFT+1                          { move-column-to-workspace 1; }
+    MOD+SHIFT+2                          { move-column-to-workspace 2; }
+    MOD+SHIFT+3                          { move-column-to-workspace 3; }
+    MOD+SHIFT+4                          { move-column-to-workspace 4; }
+    MOD+SHIFT+5                          { move-column-to-workspace 5; }
+    MOD+SHIFT+6                          { move-column-to-workspace 6; }
+    MOD+SHIFT+7                          { move-column-to-workspace 7; }
+    MOD+SHIFT+8                          { move-column-to-workspace 8; }
+    MOD+SHIFT+9                          { move-column-to-workspace 9; }
 
     MOD+TAB                             { focus-workspace-previous; }
 
     // ─── Layout Controls ───
-    MOD+CTRL+F                          { expand-column-to-available-width; }
+    MOD+F                          { expand-column-to-available-width; }
     MOD+C                               { center-column; }
-    MOD+CTRL+C                          { center-visible-columns; }
+    MOD+SHIFT+C                          { center-visible-columns; }
     MOD+MINUS                           { set-column-width "-10%"; }
     MOD+EQUAL                           { set-column-width "+10%"; }
     MOD+SHIFT+MINUS                     { set-window-height "-10%"; }
     MOD+SHIFT+EQUAL                     { set-window-height "+10%"; }
 
     // ─── Modes ───
-    MOD+T                               { toggle-window-floating; }
-    MOD+F                               { fullscreen-window; }
+    MOD+V                               { toggle-window-floating; }
+    MOD+SHIFT+F                               { fullscreen-window; }
     MOD+W                               { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
@@ -146,14 +145,19 @@ binds {
     // ─── Exit / Power ───
     CTRL+ALT+DELETE                     { quit; } // Also quits Niri
     MOD+SHIFT+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
-    MOD+O                               repeat=false { toggle-overview; }
+    ALT+TAB                               repeat=false { toggle-overview; }
 }
 
 prefer-no-csd // Disable program decorations
 screenshot-path null // Disable screenshot saving
 
+cursor {
+    xcursor-size 24
+    hide-after-inactive-ms 30000
+}
+
 layout {
-    gaps 16
+    gaps 7
     center-focused-column "never"
 
     preset-column-widths {
