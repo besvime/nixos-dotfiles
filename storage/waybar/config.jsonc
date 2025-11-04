@@ -1,0 +1,68 @@
+{
+  "reload_style_on_change": true,
+  "height": 20,
+  "modules-left": [
+      "ext/workspaces"
+      //"dwl/tags",
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "tray"
+  ],
+
+  "ext/workspaces": {
+    "format": "{icon}",
+    "ignore-hidden": true,
+    "on-click": "activate",
+    "sort-by-id": true
+  },
+
+  "dwl/tags": {
+      "num-tags":9
+  },
+
+  "dwl/window": {
+      "format": "[{layout}]{title}"
+  },
+
+
+  "clock": {
+    "format": "{:%a, %d — %I:%M %p}",
+    "tooltip-format": "{:%A, %B %d %Y\n%I:%M:%S %p}",
+    "interval": 5
+  },
+
+  "network": {
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+
+    "interval": 3,
+    "spacing": 1,
+
+		"tooltip-format": "Connected to {essid}\nSignal strenght: {signalStrength}%\n\uf063 {bandwidthDownBytes:<} \uf062 {bandwidthUpBytes:>}",
+		"tooltip-format-ethernet": "<span size='12000' rise='-2pt'>\uf063</span> {bandwidthDownBytes:<} <span size='12000' rise='-2pt'>\uf062</span> {bandwidthUpBytes:=}"
+	},
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+
+		"on-click": "pavucontrol",
+    "scroll-step": 5,
+    "format-muted": "",
+
+		"tooltip-format": "Volume: {volume}%\nDevice: {desc}"
+	}
+}
+

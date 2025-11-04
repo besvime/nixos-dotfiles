@@ -28,10 +28,6 @@
       mango.enable = true;
       steam.enable = true;
       xwayland.enable = true;
-      sway = {
-        enable = true;
-        wrapperFeatures.gtk = true;
-      };
   };
 
   services = {
