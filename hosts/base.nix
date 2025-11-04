@@ -33,7 +33,7 @@
   users.users.noir = {
     isNormalUser = true;
     description = "Noir";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "input" ];
   };
 
   # Shared environment settings

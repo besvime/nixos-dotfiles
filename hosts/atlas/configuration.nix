@@ -25,6 +25,7 @@
 
   # programs
   programs = {
+      mango.enable = true;
       steam.enable = true;
       xwayland.enable = true;
       sway = {
@@ -34,7 +35,7 @@
   };
 
   services = {
-    displayManager.ly.enable = true;
+    displayManager.gdm.enable = true;
     desktopManager.plasma6.enable = true;
     
     input-remapper = {
