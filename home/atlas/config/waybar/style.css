@@ -13,33 +13,23 @@ window#waybar {
 }
 
 tooltip {
-  background: rgba(40, 40, 40, 0.76);
-  border-radius: 4px;
+  background: rgba(18, 18, 18, 0.76);
+  border-radius: 8px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #F6D496;
   color: #ddca9e;
 }
 
-#language,
-#custom-updates,
-#custom-weather,
 #window,
 #taskbar,
 #tags,
-#custom-playerctl,
 #clock,
-#battery,
 #pulseaudio,
-#cpu,
-#temperature,
-#backlight,
+#bluetooth,
 #network,
 #workspaces,
 #tray,
-#cava,
-#keyboard-state,
-#custom-notification,
 #custom-power {
   background: none;
   padding: 0px 10px;
@@ -48,16 +38,15 @@ tooltip {
   margin-bottom: 0px;
 }
 
-
 #tags {
-  border-radius: 4px;
+  border-radius: 8px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #F6D496;
   margin-left: 4px;
   padding-left: 10px;
   padding-right: 6px;
-  background: rgba(40, 40, 40, 0.76);
+  background: rgba(18, 18, 18, 0.76);
 
 }
 
@@ -101,13 +90,9 @@ tooltip {
 }
 
 #tags button.focused {
-  background-color: #ddca9e;
-  color: #282828;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding-top: 1px;
-  padding-bottom: 0px;
-  border-radius: 3px;
+  background-color: transparent;
+  color: #eb984a;
+  border-radius: 7px;
 }
 
 #tags button.urgent {
@@ -117,31 +102,17 @@ tooltip {
   margin-bottom: 5px;
   padding-top: 1px;
   padding-bottom: 0px;
-  border-radius: 3px;
+  border-radius: 7px;
 }
 
 #tray {
-  background: rgba(40, 40, 40, 0.76);
-  border-radius: 4px;
+  background: rgba(18, 18, 18, 0.76);
+  border-radius: 8px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #F6D496;
   margin-right: 4px;
   margin-left: 4px;
-  padding-right: 8px;
-  padding-left: 9px;
-  padding-top: 2px;
-  color: #ddca9e;
-}
-
-#network {
-  background: rgba(40, 40, 40, 0.76);
-  border-radius: 4px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #c9b890;
-  margin-right: 4px;
-  margin-left: 0px;
   padding-right: 8px;
   padding-left: 9px;
   padding-top: 2px;
@@ -149,62 +120,34 @@ tooltip {
 }
 
 #workspaces {
-  background: rgba(40, 40, 40, 0.76);
-  border-radius: 4px;
+  background: rgba(18, 18, 18, 0.76);
+  border-radius: 8px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #F6D496;
   margin-left: 4px;
   padding-right: 6px;
   padding-left: 4px;
 }
 
-#language {
-  background: rgba(40, 40, 40, 0.76);
-  color: #ddca9e;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #c9b890;
-  border-right: 0px;
-  border-radius: 4px 0px 0px 4px;
-  min-width: 24px;
-}
-
-#keyboard-state {
-  background: none;
-  color: #ddca9e;
-  border: none;
-  padding-top: 1px;
-}
-
-#custom-updates {
-  background: rgba(40, 40, 40, 0.76);
-  color: #ddca9e;
-  border-radius: 0px 4px 4px 0px;
-  border-width: 2px;
-  border-left: 0px;
-  border-style: solid;
-  border-color: #c9b890;
-}
-
 #window {
-  background: rgba(40, 40, 40, 0.76);
+  background: rgba(18, 18, 18, 0.76);
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
-  border-radius: 4px;
+  border-color: #F6D496;
+  border-radius: 8px;
   margin-left: 0px;
   margin-right: 10px;
   color: #ddca9e;
 }
 
 #taskbar {
-  background: rgba(40, 40, 40, 0.76);
+  background: rgba(18, 18, 18, 0.76);
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
-  border-radius: 4px;
-  margin-left: 10px;
+  border-color: #F6D496;
+  border-radius: 8px;
+  margin-left: 4px;
   margin-right: 10px;
   color: #ddca9e;
 }
@@ -233,7 +176,7 @@ tooltip {
   padding-bottom: 0px;
   padding-left: 3px;
   padding-right: 3px;
-  border-radius: 3px;
+  border-radius: 7px;
 }
 
 #taskbar button.urgent {
@@ -245,7 +188,7 @@ tooltip {
   padding-bottom: 0px;
   padding-left: 3px;
   padding-right: 3px;
-  border-radius: 3px;
+  border-radius: 7px;
 }
 
 #taskbar button.active {
@@ -257,127 +200,62 @@ tooltip {
   padding-bottom: 0px;
   padding-left: 3px;
   padding-right: 3px;
-  border-radius: 3px;
-}
-
-#custom-playerctl {
-  background: rgba(40, 40, 40, 0.76);
-  border-width: 2px;
-  border-style: solid;
-  border-color: #c9b890;
-  border-right: 0px;
-  border-left: 0px;
-  color: #ddca9e;
-}
-
-#cava {
-  background: rgba(40, 40, 40, 0.76);
-  border-radius: 4px 0px 0px 4px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #c9b890;
-  margin-left: 4px;
-  color: #ddca9e;
+  border-radius: 7px;
 }
 
 #clock {
-  background: rgba(40, 40, 40, 0.76);
-  color: #ddca9e;
+  background: rgba(18, 18, 18, 0.76);
+  color: #eb984a;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #F6D496;
   border-right: 2px;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 8px 0px 0px 8px;
 }
 
 #pulseaudio {
-  background: rgba(40, 40, 40, 0.76);
+  background: rgba(18, 18, 18, 0.76);
   color: #ddca9e;
   border-width: 2px;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #F6D496;
   border-right: 0px;
   margin-left: 0px;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 8px 0px 0px 8px;
 }
 
-#cpu  {
-  background: rgba(40, 40, 40, 0.76);
+#bluetooth  {
+  background: rgba(18, 18, 18, 0.76);
   color: #ddca9e;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
+  border-color: #F6D496;
   border-right: 0px;
   border-left: 0px;
   border-radius: 0px;
+  padding-left: 17px;
 }
 
-#temperature {
-  background: rgba(40, 40, 40, 0.76);
+#network {
+  background: rgba(18, 18, 18, 0.76);
   color: #ddca9e;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
-  border-right: 0px;
-  border-left: 0px;
-  border-radius: 0px;
-}
-
-#backlight {
-  background: rgba(40, 40, 40, 0.76);
-  color: #ddca9e;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #c9b890;
-  border-radius: 0px 4px 4px 0px;
+  border-color: #F6D496;
+  border-radius: 0px 8px 8px 0px;
   border-left: 0px;
   margin-right: 4px;
-}
-
-#battery {
-  background: rgba(40, 40, 40, 0.76);
-  color: #ddca9e;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #c9b890;
-  border-radius: 0px;
-  border-right: 0px;
-  border-left: 0px;
-}
-
-#custom-weather {
-  background: rgba(40, 40, 40, 0.76);
-  color: #ddca9e;
-  border-radius: 4px 0px 0px 4px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #c9b890;
-  border-right: 0px;
-  margin-left: 4px;
-  padding-right: 7px;
-  padding-top: 1px;
-}
-
-#custom-notification {
-  background: rgba(40, 40, 40, 0.76);
-  color: #ddca9e;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #c9b890;
-  border-left: 0px;
-  border-right: 0px;
-  border-radius: 0px;
-  min-width: 18px;
+  padding-right: 17px;
 }
 
 #custom-power {
-  background: rgba(40, 40, 40, 0.76);
+  background: rgba(18, 18, 18, 0.76);
   color: #ddca9e;
   border-width: 2px;
   border-style: solid;
-  border-color: #c9b890;
-  border-radius: 0px 4px 4px 0px;
+  border-color: #F6D496;
+  border-radius: 0px 8px 8px 0px;
   border-left: 0px;
   margin-left: 0px;
   margin-right: 4px;

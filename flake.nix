@@ -4,10 +4,7 @@
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 		home-manager.url = "github:nix-community/home-manager";
-		mango = {
-			url = "github:DreamMaoMao/mangowc";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		mango.url = "github:DreamMaoMao/mangowc";
 	};
 
 	outputs = { self, nixpkgs, home-manager, mango, ... }: {
