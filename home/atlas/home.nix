@@ -34,7 +34,6 @@
   # configs
   home.file.".config/mango".source = ./config/mango;
   home.file.".config/waybar".source = ./config/waybar;
-  home.file.".config/rofi".source = ./config/rofi;
   home.file.".config/mako".source = ./config/mako;
   home.file.".config/fuzzel".source = ./config/fuzzel;
 
