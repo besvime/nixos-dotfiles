@@ -15,21 +15,23 @@
     satty
     wl-clipboard
     qownnotes
-    wlogout
-    mako
     xwayland-satellite
     swayfx
     soteria
-    rofi
     neovim
-    # new
+    # ricing
+    wlogout
+    mako
+    rofi
     swww
     waypaper
+    waybar
   ];
   
   # configs
   home.file.".config/mango".source = ./config/mango;
-
+  home.file.".config/waybar".source = ./config/waybar;
+  
   # programs
   programs.git = {
     enable = true;
