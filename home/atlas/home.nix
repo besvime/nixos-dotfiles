@@ -6,29 +6,31 @@
 
   home.packages = with pkgs; [
     brave
-    discord
     vesktop
     spotify
     input-remapper
+
     grim
     slurp
     satty
     wl-clipboard
-    qownnotes
     xwayland-satellite
-    swayfx
-    soteria
+    pantheon.pantheon-agent-polkit
+
+    qownnotes
     neovim
-    # ricing
+    
     wlogout
     mako
     fuzzel
     swww
     waypaper
     waybar
-    # too much rn | swaync
+    
     pamixer
     pavucontrol
+    
+    nautilus
   ];
   
   # configs

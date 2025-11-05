@@ -6,7 +6,7 @@
     "gtk-layer-shell": true,
     "ipc": false,
     "reload_style_on_change": true,
-    "height": 45,
+    "height": 46,
     "modules-left": [
         "dwl/tags",
         "wlr/taskbar"
@@ -29,7 +29,8 @@
       "format": "",
       "format-disabled": "󰂲",
       "format-connected": "",
-      "tooltip-format": "Devices connected: {num_connections}"
+      "tooltip-format": "Devices connected: {num_connections}",
+      "on-click": "blueberry"
     },
 
     "dwl/tags": {
@@ -49,8 +50,7 @@
       "tooltip-format": "{title}",
       "markup": true,
       "on-click": "activate",
-      "on-click-right": "close",
-      "ignore-list": ["Rofi", "wofi"]
+      "on-click-right": "close"
     },
 
     "tray": {
@@ -71,7 +71,7 @@
 
     "clock": {
       "format": "  {:%a, %d — %I:%M %p}",
-      "format-alt": "{:%A, %b %d} ",
+      "format-alt": " {:%A, %b %d}",
       "tooltip-format": "{:%Y}",
       "calendar": {
         "mode": "year",
@@ -90,7 +90,8 @@
 
     "pulseaudio": {
         "format": "{icon}",
-        "tooltip": false,
+        "tooltip": true,
+        "tooltip-format": "Volume: {volume}%\nDevice: {desc}",
         "format-muted": "",
         "on-click": "pavucontrol",
         "on-click-right": "pamixer -t",
@@ -105,7 +106,6 @@
     "custom/power": {
         "format": "",
         "tooltip": false,
-        "on-click": "wlogout -b 6 --protocol layer-shell",
-        "on-click-right": "bash ~/.config/eww/System-Menu/launch"
+        "on-click": "wlogout -b 6 --protocol layer-shell"
     }
 }
