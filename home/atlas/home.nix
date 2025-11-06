@@ -48,6 +48,7 @@
   home.file.".config/waybar".source = ./config/waybar;
   home.file.".config/mako".source = ./config/mako;
   home.file.".config/fuzzel".source = ./config/fuzzel;
+  home.file.".config/wlogout".source = ./config/wlogout;
 
   # programs
   programs.git = {

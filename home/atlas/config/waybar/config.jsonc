@@ -22,6 +22,7 @@
       "bluetooth",
       "network",
       "clock",
+      "custom/clipboard",
       "custom/power"
     ],
 
@@ -71,7 +72,7 @@
 
     "clock": {
       "format": "  {:%a, %d — %I:%M %p}",
-      "format-alt": " {:%A, %b %d}",
+      "format-alt": "  {:%A, %b %d}",
       "tooltip-format": "{:%Y}",
       "calendar": {
         "mode": "year",
@@ -107,5 +108,11 @@
         "format": "",
         "tooltip": false,
         "on-click": "wlogout -b 6 --protocol layer-shell"
+    },
+
+    "custom/clipboard": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "cliphist list | fuzzel --dmenu --width=50 --lines=10 --anchor=top-right --x-margin=4 | cliphist decode | wl-copy"
     }
 }

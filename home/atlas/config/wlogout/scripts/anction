@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+case $1 in
+    shutdown)
+        shutdown now
+        ;;
+    reboot)
+        reboot
+        ;;
+    logout)
+        mmsg -q
+        ;;
+    *)
+        echo "error"
+esac

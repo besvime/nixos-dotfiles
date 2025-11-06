@@ -1,0 +1,20 @@
+{
+    "label" : "logout",
+    "action" : "~/nixos-dotfiles/home/atlas/config/wlogout/scripts/anction logout",
+    "text" : " Logout  ",
+    "keybind" : "m"
+}
+
+{
+    "label" : "shutdown",
+    "action" : "~/nixos-dotfiles/home/atlas/config/wlogout/scripts/anction shutdown",
+    "text" : "Shutdown ",
+    "keybind" : "d"
+}
+
+{
+    "label" : "reboot",
+    "action" : "~/nixos-dotfiles/home/atlas/config/wlogout/scripts/anction reboot",
+    "text" : " Reboot  ",
+    "keybind" : "r"
+}

@@ -30,6 +30,7 @@ tooltip {
 #network,
 #workspaces,
 #tray,
+#custom-clipboard,
 #custom-power {
   background: none;
   padding: 0px 10px;
@@ -217,7 +218,6 @@ tooltip {
   background: rgba(18, 18, 18, 0.76);
   color: #ddca9e;
   border-width: 2px;
-  border-width: 2px;
   border-style: solid;
   border-color: #F6D496;
   border-right: 0px;
@@ -249,7 +249,7 @@ tooltip {
   padding-right: 17px;
 }
 
-#custom-power {
+#custom-clipboard {
   background: rgba(18, 18, 18, 0.76);
   color: #ddca9e;
   border-width: 2px;
@@ -257,6 +257,18 @@ tooltip {
   border-color: #F6D496;
   border-radius: 0px 8px 8px 0px;
   border-left: 0px;
+  margin-left: 0px;
+  margin-right: 4px;
+  padding-right: 14px;
+}
+
+#custom-power {
+  background: rgba(18, 18, 18, 0.76);
+  color: #ddca9e;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #F6D496;
+  border-radius: 8px 8px 8px 8px;
   margin-left: 0px;
   margin-right: 4px;
   padding-right: 14px;
