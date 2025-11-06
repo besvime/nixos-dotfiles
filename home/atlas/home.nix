@@ -13,7 +13,15 @@
     grim
     slurp
     satty
+
     wl-clipboard
+    wl-clip-persist
+    cliphist
+    
+    gpu-screen-recorder
+
+    libnotify
+    
     xwayland-satellite
     pantheon.pantheon-agent-polkit
 
@@ -31,6 +39,8 @@
     pavucontrol
     
     nautilus
+
+    btop
   ];
   
   # configs

@@ -32,13 +32,31 @@
 
   services = {
     displayManager.gdm.enable = true;
-    desktopManager.plasma6.enable = true;
     
     input-remapper = {
       enable = true;
       enableUdevRules = true;
     };
   };
+
+  systemd.services = {
+    flatpak-repo = {
+      wantedBy = [ "multi-user.target" ];
+      path = [ pkgs.flatpak ];
+      script = ''
+        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+      '';
+    };
+    install-flatpaks-apps = {
+      wantedBy = [ "multi-user.target" ];
+      path = [ pkgs.flatpak ];
+      script = ''
+        flatpak install -y org.vinegarhq.Sober
+        flatpak install -y org.vinegarhq.Vinegar
+      '';
+    };
+  };
+  
 
   # auto-mounted drives
   fileSystems."/mnt/Games" = {
