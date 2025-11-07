@@ -10,6 +10,9 @@
     spotify
     input-remapper
 
+    lazygit
+    element-desktop
+
     grim
     slurp
     satty
