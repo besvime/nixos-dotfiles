@@ -13,7 +13,7 @@
 				system = "x86_64-linux";
 				modules = [
 					./hosts/base.nix
-					./hosts/atlas/configuration.nix
+					./hosts/configuration.nix
 					mango.nixosModules.mango
 					home-manager.nixosModules.home-manager
 
@@ -21,25 +21,7 @@
 						home-manager = {
 							useGlobalPkgs = true;
 							useUserPackages = true;
-							users.noir = import ./home/atlas/home.nix;
-							backupFileExtension = "backup";
-						};
-					}
-				];
-			};
-
-			origami = nixpkgs.lib.nixosSystem {
-				system = "x86_64-linux";
-				modules = [
-					./hosts/base.nix
-					./hosts/origami/configuration.nix
-					home-manager.nixosModules.home-manager
-
-					{
-						home-manager = {
-							useGlobalPkgs = true;
-							useUserPackages = true;
-							users.noir = import ./home/origami/home.nix;
+							users.noir = import ./home/home.nix;
 							backupFileExtension = "backup";
 						};
 					}
